@@ -1,0 +1,125 @@
+/* GENERAL STYLES */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+}
+
+header {
+    background: #667eea;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* CONTROLS SECTION */
+.controls {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-group,
+.sort-group {
+    margin-bottom: 1.5rem;
+}
+
+.controls h3 {
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.filter-btn,
+.sort-btn {
+    padding: 0.6rem 1.2rem;
+    border: 2px solid #667eea;
+    background: white;
+    color: #667eea;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.sort-btn:hover {
+    background: #f0f2ff;
+    transform: translateY(-2px);
+}
+
+.filter-btn.active,
+.sort-btn.active {
+    background: #667eea;
+    color: white;
+}
+
+.filter-btn:active,
+.sort-btn:active {
+    transform: translateY(0);
+}
+
+/* RECIPE CARDS */
+#recipe-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.recipe-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-card h3 {
+    margin-top: 0;
+}
+
+.recipe-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.difficulty.easy {
+    color: green;
+}
+
+.difficulty.medium {
+    color: orange;
+}
+
+.difficulty.hard {
+    color: red;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .button-group {
+        flex-direction: column;
+    }
+
+    .filter-btn,
+    .sort-btn {
+        width: 100%;
+    }
+}
